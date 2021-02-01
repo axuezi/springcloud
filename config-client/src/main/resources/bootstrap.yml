@@ -1,0 +1,10 @@
+server:
+  port: 8881
+spring:
+  cloud:
+    config:
+      label: master # 指明远程仓库的分支
+      profile: dev # 1.dev开发环境配置文件 2.test测试环境 3.pro正式环境
+      uri: http://localhost:8888/   # 指明配置服务中心的网址
+  application:
+    name: config-client

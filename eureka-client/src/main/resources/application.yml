@@ -1,0 +1,12 @@
+server:
+  port: 8202
+spring:
+  application:
+    name: eureka-client
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/,http://localhost:8101/eureka/,http://localhost:8102/eureka/
+  instance:
+    instance-id: vmei-service-3
+    prefer-ip-address: true

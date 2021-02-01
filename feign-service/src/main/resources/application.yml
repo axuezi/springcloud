@@ -1,0 +1,14 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8100/eureka/,http://localhost:8101/eureka/,http://localhost:8102/eureka/
+server:
+  port: 8401
+spring:
+  application:
+    name: feign-service
+
+# Feign是自带断路器的,在D版本的Spring Cloud中,它没有默认打开。需要在配置文件中配置打开它
+feign:
+  hystrix:
+    enabled: true
